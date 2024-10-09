@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: catalog-service
+
+server:
+  port: 9001
+  tomcat:
+    connection-timeout: '2s'   # limit between establishing tcp connection with client and receiving an actual request
+    keep-alive-timeout: '15s'   #  how long to keep connection open while waiting for new HTTP requests
+  threads:
+    max: 50  # maximum threads available for request processing  -- can reach upto 200 by default
+    min-spare: 5 # minimum number of thread available all the time
